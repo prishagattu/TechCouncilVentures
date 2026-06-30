@@ -1,1 +1,444 @@
-print hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NJ Venture Intelligence</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#F4F7FB;
+color:#111827;
+overflow-x:hidden;
+}
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+height:100vh;
+width:260px;
+background:#071A38;
+color:white;
+padding:25px;
+overflow-y:auto;
+}
+
+.sidebar h2{
+font-weight:800;
+margin-bottom:35px;
+}
+
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+padding:13px 15px;
+margin-bottom:10px;
+border-radius:10px;
+transition:.25s;
+}
+
+.sidebar a:hover{
+background:#2563EB;
+}
+
+.main{
+margin-left:260px;
+padding:30px;
+}
+
+.topbar{
+background:white;
+border-radius:16px;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+margin-bottom:25px;
+}
+
+.search{
+width:420px;
+}
+
+.card{
+border:none;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.metric{
+padding:25px;
+}
+
+.metric h2{
+font-size:34px;
+font-weight:700;
+}
+
+.metric p{
+color:gray;
+margin-bottom:0;
+}
+
+.section-title{
+font-size:24px;
+font-weight:700;
+margin-bottom:18px;
+margin-top:30px;
+}
+
+.news-item{
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+.news-item:last-child{
+border:none;
+}
+
+.table td{
+vertical-align:middle;
+}
+
+.ai-box{
+background:linear-gradient(135deg,#2563EB,#1D4ED8);
+color:white;
+padding:35px;
+border-radius:18px;
+}
+
+.ai-box textarea{
+height:120px;
+}
+
+.badge-custom{
+background:#DBEAFE;
+color:#1E40AF;
+padding:8px 12px;
+border-radius:30px;
+font-size:12px;
+}
+
+.trend-card{
+padding:20px;
+height:180px;
+}
+
+.footer{
+text-align:center;
+margin-top:50px;
+color:gray;
+padding:25px;
+}
+
+.placeholder-chart{
+height:220px;
+background:#EEF4FF;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:600;
+color:#2563EB;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2><i class="bi bi-graph-up-arrow"></i> NJ Venture</h2>
+
+<a href="#"><i class="bi bi-speedometer2"></i> Dashboard</a>
+<a href="#"><i class="bi bi-buildings"></i> Startup Database</a>
+<a href="#"><i class="bi bi-robot"></i> AI Research</a>
+<a href="#"><i class="bi bi-newspaper"></i> News Intelligence</a>
+<a href="#"><i class="bi bi-bar-chart-line"></i> Market Trends</a>
+<a href="#"><i class="bi bi-currency-dollar"></i> Funding</a>
+<a href="#"><i class="bi bi-bank"></i> Government Grants</a>
+<a href="#"><i class="bi bi-mortarboard"></i> Universities</a>
+<a href="#"><i class="bi bi-map"></i> Startup Map</a>
+<a href="#"><i class="bi bi-bell"></i> Alerts</a>
+<a href="#"><i class="bi bi-gear"></i> Settings</a>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<div>
+
+<h3>New Jersey Venture Intelligence Platform</h3>
+
+<small class="text-muted">
+AI-powered startup sourcing & market intelligence
+</small>
+
+</div>
+
+<div class="search">
+
+<input
+class="form-control form-control-lg"
+placeholder="Search startups, founders, investors, technologies...">
+
+</div>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-3">
+
+<div class="card metric">
+
+<h2>1,246</h2>
+
+<p>Startups Tracked</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="card metric">
+
+<h2>$4.2B</h2>
+
+<p>Total Funding</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="card metric">
+
+<h2>93</h2>
+
+<p>Active Grants</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="card metric">
+
+<h2>18</h2>
+
+<p>New Companies This Week</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section-title">
+AI Market Summary
+</div>
+
+<div class="ai-box">
+
+<h3>Weekly AI Intelligence Report</h3>
+
+<p>
+
+Healthcare AI continues to dominate investment activity
+across New Jersey while advanced manufacturing,
+robotics, and climate technology have shown strong
+growth. University spinouts remain one of the strongest
+sources of venture-backed innovation.
+
+</p>
+
+<button class="btn btn-light">
+Generate New Summary
+</button>
+
+</div>
+
+<div class="row mt-4 g-4">
+
+<div class="col-lg-8">
+
+<div class="card p-4">
+
+<h4>Funding Activity</h4>
+
+<div class="placeholder-chart">
+
+Funding Chart Placeholder
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card p-4">
+
+<h4>Top Industries</h4>
+
+<div class="mt-3">
+
+<span class="badge-custom">Healthcare AI</span><br><br>
+
+<span class="badge-custom">Biotech</span><br><br>
+
+<span class="badge-custom">Climate Tech</span><br><br>
+
+<span class="badge-custom">Cybersecurity</span><br><br>
+
+<span class="badge-custom">Manufacturing</span><br><br>
+
+<span class="badge-custom">Robotics</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section-title">
+
+Latest Startup Intelligence
+
+</div>
+
+<div class="card p-4">
+
+<table class="table">
+
+<thead>
+
+<tr>
+
+<th>Company</th>
+
+<th>Industry</th>
+
+<th>Stage</th>
+
+<th>Funding</th>
+
+<th>HQ</th>
+
+<th>Employees</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Couragene</td>
+
+<td>Healthcare AI</td>
+
+<td>Seed</td>
+
+<td>$3.5M</td>
+
+<td>Newark</td>
+
+<td>6</td>
+
+<td><span class="badge bg-success">Growing</span></td>
+
+</tr>
+
+<tr>
+
+<td>Nova Robotics</td>
+
+<td>Robotics</td>
+
+<td>Series A</td>
+
+<td>$18M</td>
+
+<td>Princeton</td>
+
+<td>42</td>
+
+<td><span class="badge bg-primary">Funded</span></td>
+
+</tr>
+
+<tr>
+
+<td>GreenVolt Energy</td>
+
+<td>Climate Tech</td>
+
+<td>Seed</td>
+
+<td>$5M</td>
+
+<td>Hoboken</td>
+
+<td>15</td>
+
+<td><span class="badge bg-warning text-dark">Monitoring</span></td>
+
+</tr>
+
+<tr>
+
+<td>BioAnalytics</td>
+
+<td>Biotech</td>
+
+<td>Series B</td>
+
+<td>$42M</td>
+
+<td>New Brunswick</td>
+
+<td>115</td>
+
+<td><span class="badge bg-info">Scaling</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
